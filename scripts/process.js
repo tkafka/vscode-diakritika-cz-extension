@@ -10,10 +10,12 @@ if (!fs.existsSync(fileName)) {
 var arr = JSON.parse(fs.readFileSync(fileName, 'utf8'));
 
 console.log(`word n`);
+var totalWords = 0
 arr.forEach((words, i) => {
 	if (words.length > 0) {
 		let pseudoFrequency = Math.round(1000000000 / i)
 		words.forEach((word) => {
+			totalWords++;
 			console.log(`${word}\t${pseudoFrequency}`);
 		});
 		
@@ -22,3 +24,5 @@ arr.forEach((words, i) => {
 		}
 	} 
 });
+
+console.error(`Processed ${totalWords} words.`)
