@@ -9,8 +9,9 @@ Forked from https://github.com/zemacik/vscode-diakritika-sk-extension
 1. Download `*_cs.msgpack.gz` from [wordfreq repo](https://github.com/LuminosoInsight/wordfreq/tree/master/wordfreq/data)
 2. Unpack `.msgpack` files
 3. Install `msgpack2json` from [msgpack-tools](https://github.com/ludocode/msgpack-tools): `brew install https://ludocode.github.io/msgpack-tools.rb`
-4. `msgpack2json -p -i small_cs.msgpack > dict_CS.json` && `msgpack2json -p -i large_cs.msgpack > dict_CS_long.json`
-
+4. `msgpack2json -p -i small_cs.msgpack > ./resources/dict_sources/dict_CS.json` && `msgpack2json -p -i large_cs.msgpack > ./resources/dict_sources/dict_CS_long.json`
+5. NPM install scripts: `pushd ./scripts; npm install; popd`
+5. Process dictionaries: `node ./scripts/process.js ./resources/dict_sources/dict_CS.json > ./resources/dict_CS.txt` && `node ./scripts/process.js ./resources/dict_sources/dict_CS_long.json > ./resources/dict_CS_long.txt`
 
 ### Installation
 
