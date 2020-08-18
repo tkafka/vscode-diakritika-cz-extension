@@ -19,7 +19,7 @@ Forked from https://github.com/zemacik/vscode-diakritika-sk-extension
 2. Launch Code
 3. Ppen the command palette (press `F1`)
 4. Select `Install Extension`
-5. Choose the `Diakritika (SK)`
+5. Choose the `Diakritika (CS)`
 6. Reload Visual Studio Code
 
 

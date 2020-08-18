@@ -12,13 +12,13 @@ interface IDiacriticsSettings {
 // GLOBALS
 let dictionary: Object = null;
 let settings: IDiacriticsSettings;
-let CONFIGFILE = vscode.workspace.rootPath + "/.vscode/diakritika_sk.json";
+let CONFIGFILE = vscode.workspace.rootPath + "/.vscode/diakritika_cs.json";
 let diacriticsAdder: DiacriticsAdder;
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-    console.log('Activating extension - "vscode-diakritika-sk-extension"');
+    console.log('Activating extension - "vscode-diakritika-cs-extension"');
 
     settings = readSettings();
     diacriticsAdder = new DiacriticsAdder(settings.dictionary, settings.ignoreWordsList, context.extensionPath + '/resources');
@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
     let changeDictionaryDisposable = vscode.commands.registerCommand('extension.changeDictionary', changeDictionary);
     context.subscriptions.push(changeDictionaryDisposable);
 
-    console.log('Extension activated - "vscode-diakritika-sk-extension"');
+    console.log('Extension activated - "vscode-diakritika-cs-extension"');
 }
 
 // this method is called when your extension is deactivated
@@ -93,7 +93,7 @@ function readSettings(): IDiacriticsSettings {
             cfg = JSON.parse(fs.readFileSync(file).toString());
         }
         catch (err) {
-            cfg = JSON.parse('{"version": "0.0.1", "dictionary": "SK", "ignoreWordsList": [] }');
+            cfg = JSON.parse('{"version": "0.0.1", "dictionary": "CS", "ignoreWordsList": [] }');
         }
 
         return cfg;
@@ -115,8 +115,8 @@ function updateSettings(): void {
 function changeDictionary() {
     let items: vscode.QuickPickItem[] = [];
 
-    items.push({ label: "Short dictionary (50 000 words, faster to initialize)", description: "SK" });
-    items.push({ label: "Long dictionary (1 800 000 words, slower to initialize)", description: "SK_long" });
+    items.push({ label: "Short dictionary (50 000 words, faster to initialize)", description: "CS" });
+    items.push({ label: "Long dictionary (500 000 words, slower to initialize)", description: "CS_long" });
     // let index: number;
     // for (let i = 0; i < items.length; i++) {
     //     let element = items[i];

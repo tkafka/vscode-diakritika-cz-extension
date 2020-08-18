@@ -1,11 +1,11 @@
 {
-    "name": "vscode-diakritika-sk-extension",
-    "displayName": "Diakritika (SK)",
-    "description": "Adds and removes diacritics to selected text (Slovak edition)",
+    "name": "vscode-diakritika-cs-extension",
+    "displayName": "Diakritika (CS)",
+    "description": "Adds and removes diacritics to selected text (Czech edition)",
     "version": "1.0.6",
-    "publisher": "MichalKrchnavy",
+    "publisher": "tkafka",
     "author": {
-        "name": "Michal Krchňavý"
+        "name": "Michal Krchňavý (forked by Tomáš Kafka)"
     },
     "engines": {
         "vscode": "^0.10.6"
@@ -66,11 +66,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/zemacik/vscode-diakritika-sk-extension.git"
+        "url": "https://github.com/tkafka/vscode-diakritika-cz-extension.git"
     },
-    "homepage": "https://github.com/zemacik/vscode-diakritika-sk-extension/blob/master/README.md",
+    "homepage": "https://github.com/tkafka/vscode-diakritika-cz-extension/blob/master/README.md",
     "bugs": {
-        "url": "https://github.com/zemacik/vscode-diakritika-sk-extension/issues",
-        "email": "michal@krchnavy.sk"
+        "url": "https://github.com/tkafka/vscode-diakritika-cz-extension/issues",
+        "email": "support@tomaskafka.com"
     }
 }

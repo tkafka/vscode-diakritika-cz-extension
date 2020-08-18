@@ -19,7 +19,7 @@ export default class DiacriticsAdder {
     constructor(dictionary: string, ignoredWordList?: string[], dictionaryPath?: string) {
         this._ignoredWordList = ignoredWordList || [];
         this._dictionaryPath = dictionaryPath || './resources';
-        this._activeDictionary = dictionary || 'SK';
+        this._activeDictionary = dictionary || 'CS';
     }
 
     public initialize(): Stream {
@@ -73,7 +73,7 @@ export default class DiacriticsAdder {
     public dictionaryChanged(dictionary: string) {
         this._dictionary = {};
         this.isInitialized = false;
-        this._activeDictionary = dictionary || 'SK';
+        this._activeDictionary = dictionary || 'CS';
     }
 
     private transform(text: string): string {
